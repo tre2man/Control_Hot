@@ -24,7 +24,7 @@ gpio.write(7, true, function(err) {
         if (err) throw err;
         console.log('Written True to pin');
 	console.log(path.join(__dirname, 'public'));
-	return res.render('index', {status: "보일러 전원 On"});
+	return res.render('index', {status: "Boiler On"});
     });
 
 });
@@ -35,7 +35,7 @@ gpio.write(7, false, function(err) {
         if (err) throw err;
         console.log('Written False to pin');
 	console.log(path.join(__dirname, 'public'));
-	return res.render('index',{status: "보일러 전원 Off"});
+	return res.render('index',{status: "Boiler Off"});
     });
 
 });
@@ -45,7 +45,7 @@ gpio.write(11, false, function(err) {
         if (err) throw err;
         console.log('Written False to pin');
 	console.log(path.join(__dirname, 'public'));
-	return res.render('index',{status: "온수 전원 On"});
+	return res.render('index',{status: "Hot water On"});
     });
 
 });
@@ -55,7 +55,7 @@ gpio.write(11, false, function(err) {
         if (err) throw err;
         console.log('Written False to pin');
 	console.log(path.join(__dirname, 'public'));
-	return res.render('index',{status: "온수 전원 Off"});
+	return res.render('index',{status: "Hot water Off"});
     });
 
 });
