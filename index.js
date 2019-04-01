@@ -41,11 +41,11 @@ gpio.write(7, false, function(err) {
 });
 
 app.post('/water/on', function(req, res){
-gpio.write(11, false, function(err) {
+gpio.write(11, true, function(err) {
         if (err) throw err;
-        console.log('Written False to pin');
+        console.log('Written True to pin');
 	console.log(path.join(__dirname, 'public'));
-	return res.render('index',{status: "온수 전원 On"});
+	return res.render('index', {status: "온수 On"});
     });
 
 });
@@ -55,7 +55,7 @@ gpio.write(11, false, function(err) {
         if (err) throw err;
         console.log('Written False to pin');
 	console.log(path.join(__dirname, 'public'));
-	return res.render('index',{status: "온수 전원 Off"});
+	return res.render('index',{status: "온수 Off"});
     });
 
 });
