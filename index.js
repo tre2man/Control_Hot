@@ -22,7 +22,7 @@ app.get('/', function(req, res){
 app.post('/boiler/on', function(req, res){
 gpio.write(7, true, function(err) {
         if (err) throw err;
-        console.log('Written True to pin');
+        console.log('Written True to boiler');
 	console.log(path.join(__dirname, 'public'));
 	return res.render('index', {status: "보일러 전원 On"});
     });
@@ -33,7 +33,7 @@ gpio.write(7, true, function(err) {
 app.post('/boiler/off', function(req, res){
 gpio.write(7, false, function(err) {
         if (err) throw err;
-        console.log('Written False to pin');
+        console.log('Written False to boiler');
 	console.log(path.join(__dirname, 'public'));
 	return res.render('index',{status: "보일러 전원 Off"});
     });
@@ -43,9 +43,9 @@ gpio.write(7, false, function(err) {
 app.post('/water/on', function(req, res){
 gpio.write(11, true, function(err) {
         if (err) throw err;
-        console.log('Written True to pin');
+        console.log('Written True to water');
 	console.log(path.join(__dirname, 'public'));
-	return res.render('index', {status: "온수 On"});
+	return res.render('index', {status: "온수 접지"});
     });
 
 });
@@ -53,9 +53,9 @@ gpio.write(11, true, function(err) {
 app.post('/water/off', function(req, res){
 gpio.write(11, false, function(err) {
         if (err) throw err;
-        console.log('Written False to pin');
+        console.log('Written False to water');
 	console.log(path.join(__dirname, 'public'));
-	return res.render('index',{status: "온수 Off"});
+	return res.render('index',{status: "온수 접지 해제"});
     });
 
 });
