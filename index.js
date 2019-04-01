@@ -1,10 +1,9 @@
-var express = require('express');
+var express = require('express'); 
 var app = express();
 var path = require('path');
 var gpio = require('rpi-gpio');
 
 gpio.setup(7, gpio.DIR_OUT);
-gpio.setup(11, gpio.DIR_OUT);
 
 
 
@@ -15,51 +14,32 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 console.log(path.join(__dirname, 'public'));
 
-app.get('/', function(req, res){
+app.get('/', function(req, res){ 
  	res.render('index',{status:"Press Button To change Status of Led !!"});
 });
 
-app.post('/boiler/on', function(req, res){
+app.post('/led/on', function(req, res){
 gpio.write(7, true, function(err) {
         if (err) throw err;
         console.log('Written True to pin');
 	console.log(path.join(__dirname, 'public'));
-	return res.render('index', {status: "Boiler On"});
+	return res.render('index', {status: "Cool!!Led is On"});
     });
 
 });
 
 
-app.post('/boiler/off', function(req, res){
+app.post('/led/off', function(req, res){
 gpio.write(7, false, function(err) {
         if (err) throw err;
         console.log('Written False to pin');
 	console.log(path.join(__dirname, 'public'));
-	return res.render('index',{status: "Boiler Off"});
+	return res.render('index',{status: "Ohh!! Led is Off"});
     });
 
 });
 
-app.post('/water/on', function(req, res){
-gpio.write(11, false, function(err) {
-        if (err) throw err;
-        console.log('Written False to pin');
-	console.log(path.join(__dirname, 'public'));
-	return res.render('index',{status: "Hot water On"});
-    });
-
-});
-
-app.post('/water/off', function(req, res){
-gpio.write(11, false, function(err) {
-        if (err) throw err;
-        console.log('Written False to pin');
-	console.log(path.join(__dirname, 'public'));
-	return res.render('index',{status: "Hot water Off"});
-    });
-
-});
 
 app.listen(3000, function () {
-  console.log('server start at 3000 port')
+  console.log('Simple LED Control Server Started on Port: 3000!')
 })
