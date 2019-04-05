@@ -9,7 +9,7 @@
   "keywords": [
     "rpi"
   ],
-  "author": "tre2man (https://github.com/tre2man/control_hot) thanks to (www.myelectronicslab.com)",
+  "author": "tre2man (https://github.com/tre2man/control_hot)",
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.5.6",
