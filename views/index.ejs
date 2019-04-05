@@ -3,12 +3,12 @@
 <div class="BorderMargin">
   <form action="/boiler/on" method="post">
     <button type="submit" class="button">보일러 On </button>
-      <button type="submit" formmethod="post" formaction="/boiler/off" class="button button3">보일러 Off</button>
+      <button type="submit" formmethod="post" formaction="/boiler/off" class="button3">보일러 Off</button>
   </form>
 
   <form action="/water/on" method="post">
     <button type="submit" class="button">온수 On </button>
-      <button type="submit" formmethod="post" formaction="/water/off" class="button button3">온수 Off</button>
+      <button type="submit" formmethod="post" formaction="/water/off" class="button3">온수 Off</button>
   </form>
 
   <a>현재 상태: <%=status %></a>
@@ -32,8 +32,8 @@
 
 /*.button2 {background-color: #008CBA;} /* Blue */
 /*.button3 {background-color: #f44336;} /* Red */
-.button {
-    background-color:  #f44336; /* Green */
+.button3 {
+    background-color:  #f44336; /* red */
     border: none;
     color: white;
     padding: 15px 32px;
