@@ -7,8 +7,6 @@ gpio.setup(7, gpio.DIR_OUT);
 gpio.setup(11, gpio.DIR_OUT);
 
 
-
-
 app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -16,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 console.log(path.join(__dirname, 'public'));
 
 app.get('/', function(req, res){
- 	res.render('index',{status:"Press Button To change Status of Led !!"});
+ 	res.render('index',{status:"현재 상태를 바꾸실려면 버튼을 누르세요!"});
 });
 
 app.post('/boiler/on', function(req, res){
