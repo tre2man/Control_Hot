@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 console.log(path.join(__dirname, 'public'));
 
 app.get('/', function(req, res){
- 	res.render('index',{status:"상태를 바꿀려면 버튼을 누르세요!"});
+ 	res.render('index',{status:"Press Button To change Status of Led !!"});
 });
 
 app.post('/boiler/on', function(req, res){
