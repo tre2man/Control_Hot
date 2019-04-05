@@ -3,12 +3,12 @@
 <div class="BorderMargin">
   <form action="/boiler/on" method="post">
     <button type="submit" class="button">보일러 On </button>
-      <button type="submit" formmethod="post" formaction="/boiler/off" class="button button3">보일러 Off</button>
+      <button type="submit" formmethod="post" formaction="/boiler/off" class="button1">보일러 Off </button>
   </form>
 
   <form action="/water/on" method="post">
-    <button type="submit" class="button">온수 On </button>
-      <button type="submit" formmethod="post" formaction="/water/off" class="button button3">온수 Off</button>
+    <button type="submit" class="button3">온수 On </button>
+      <button type="submit" formmethod="post" formaction="/water/off" class="button4">온수 Off </button>
   </form>
 
   <a>현재 상태: <%=status %></a>
@@ -17,31 +17,69 @@
 
 <!-- The below code is only for look and styling -->
 <style>
-.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
+  .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+  }
 
-.button2 {background-color: #008CBA;} /* Blue */
-.button3 {background-color: #f44336;} /* Red */
-.button4 {background-color: #e7e7e7; color: black;} /* Gray */
-.button5 {background-color: #555555;} /* Black */
+  /*.button2 {background-color: #008CBA;} /* Blue */
+  /*.button3 {background-color: #f44336;} /* Red */
+  .button1 {
+      background-color:  #f44336; /* red */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+  }
+
+  .button3 {
+      background-color:  #4CAF50; /* red */
+      border: none;
+      color: white;
+      padding: 15px 40px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+  }
+
+  .button4 {
+      background-color:  #f44336; /* red */
+      border: none;
+      color: white;
+      padding: 15px 40px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+  }
+  /*.button4 {background-color: #e7e7e7; color: black;} /* Gray */
+  /*.button5 {background-color: #555555;} /* Black */
 
 
-.BorderMargin {
+  .BorderMargin {
 
-   margin: 10px;
-   padding: 10px;
-   max-width: 300px;
-   height: 300px;
-   border: 1px solid black;
-}
+     margin: 10px;
+     padding: 10px;
+     max-width: 300px;
+     height: 300px;
+     border: 1px solid black;
+  }
 </style>
