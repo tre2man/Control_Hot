@@ -6,9 +6,9 @@
       <button type="submit" formmethod="post" formaction="/boiler/off" class="button1">보일러 Off </button>
   </form>
 
-  <form action="/water/on" method="post">
-    <button type="submit" class="button3">온수 On </button>
-      <button type="submit" formmethod="post" formaction="/water/off" class="button4">온수 Off </button>
+  <form action="/water/button" method="post">
+    <button type="submit" class="button3">온수 button </button>
+      <!--<button type="submit" formmethod="post" formaction="/water/off" class="button4">온수 Off </button>-->
   </form>
 
   <a>현재 상태: <%=status %></a>
@@ -46,7 +46,7 @@
   }
 
   .button3 {
-      background-color:  #4CAF50; /* red */
+      background-color:  #1725F1; /* blue */
       border: none;
       color: white;
       padding: 15px 40px;
