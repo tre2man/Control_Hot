@@ -45,11 +45,9 @@ gpio.write(11, true, function(err) {
 	console.log(path.join(__dirname, 'public'));
 	return res.render('index', {status: "온수 버튼 동작"});
     }
-  setTimeout(function(){
-    console.lig(path.join(__dirname,'delay'),500)
-  }
+  setTimeout(function(){},500)
 
-  ));
+  );
     {
     gpio.write(11, false, function(err) {
             if (err) throw err;
