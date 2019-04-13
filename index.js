@@ -58,7 +58,7 @@ gpio.write(11, true, function(err) {
 //      });
     });
 
-sleep(500);
+setTimeout(function() {},500);
 
 gpio.write(11, false, function(err) {
         if (err) throw err;
