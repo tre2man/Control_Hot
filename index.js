@@ -70,8 +70,6 @@ setTimeout(function() {
 
 });
 
-//setTimeout(function() {},500);
-
 app.listen(3000, function () {
   console.log('server start at 3000 port')
 })
