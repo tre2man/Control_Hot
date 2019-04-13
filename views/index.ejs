@@ -1,91 +1,107 @@
-<html>
+<html> <!--.ejs-->
 <head>
-<meta name="viewport" content="width=500, initial-scale=1"> <!--This line of code is for mobile responsive -->
+  <meta name="viewport" content="width=500, initial-scale=1"> <!--This line of code is for mobile responsive -->
 </head>
 
-<body>
-<div class="BorderMargin">
-  <form action="/boiler/on" method="post">
-    <button type="submit" class="button">보일러 On </button>
-      <button type="submit" formmethod="post" formaction="/boiler/off" class="button1">보일러 Off </button>
+<body bgcolor="#FFFFF2">
+  <form>
+    <button action="/boiler/on" method="post" type="submit" class="button4">보일러 On </button>
+    <button type="submit" formmethod="post" action="/boiler/off" class="button1">보일러 Off </button>
   </form>
-
-  <form action="/water/button" method="post">
-    <button type="submit" class="button3">온수 button </button>
-      <!--<button type="submit" formmethod="post" formaction="/water/off" class="button4">온수 Off </button>-->
+    <form>
+    <button action="/water/button" method="post" type="submit" class="button3">온수 button </button>
   </form>
-
+    <div id="footer">
   <a>현재 상태: <%=status %></a>
+  </div>
 
-</div>
 </body>
 
-<!-- The below code is only for look and styling -->
-<style>
-  .button {
-      background-color: #4CAF50; /* Green */
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-  }
 
-  /*.button2 {background-color: #008CBA;} /* Blue */
-  /*.button3 {background-color: #f44336;} /* Red */
-  .button1 {
-      background-color:  #f44336; /* red */
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-  }
+  <style>
 
-  .button3 {
-      background-color:  #1725F1; /* blue */
-      border: none;
-      color: white;
-      padding: 15px 40px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-  }
+  /*  background-color:  #285943; */
 
-  .button4 {
-      background-color:  #f44336; /* red */
-      border: none;
-      color: white;
-      padding: 15px 40px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-  }
-  /*.button4 {background-color: #e7e7e7; color: black;} /* Gray */
-  /*.button5 {background-color: #555555;} /* Black */
+    .button0 {
+        background-color:  #8CD790;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    /*.button2 {background-color: #008CBA;} /* Blue */
+    /*.button3 {background-color: #f44336;} /* Red */
+    .button1 {
+        background-color:  #77AF9C;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    .button3 {
+        background-color:  #285943;
+        border: none;
+        color: white;
+        padding: 15px 40px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    .button4 {
+        background-color:  #8CD790;
+        border: none;
+        color: white;
+        padding: 15px 40px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    /*.button4 {background-color: #e7e7e7; color: black;} /* Gray */
+    /*.button5 {background-color: #555555;} /* Black */
+
+/*
+   .BorderMargin {
+
+       margin: 10px;
+       padding: 10px;
+       max-width: 300px;
+       height: 300px;
+       border: 1px solid black;
+    } */
 
 
-  .BorderMargin {
 
-     margin: 10px;
-     padding: 10px;
-     max-width: 300px;
-     height: 300px;
-     border: 1px solid black;
-  }
-</style>
+    #footer {
+       position:fixed;
+       left:0px;
+       bottom:0px;
+       height:60px;
+       width:100%;
+       background:#3F4B3B;
+       color: white;
+    }
+    #footer p {
+       text-align: center;
+    }
+
+  </style>
 </html>
