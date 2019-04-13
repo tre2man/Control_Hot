@@ -29,7 +29,6 @@ gpio.write(7, true, function(err) {
 
 });
 
-
 app.post('/boiler/off', function(req, res){
 gpio.write(7, false, function(err) {
         if (err) throw err;
@@ -37,9 +36,7 @@ gpio.write(7, false, function(err) {
 	console.log(path.join(__dirname, 'public'));
 	return res.render('index',{status: "보일러 전원 Off"});
     });
-
 });
-
 
 app.post('/water/button', function(req, res){
 gpio.write(11, true, function(err) {
@@ -48,7 +45,6 @@ gpio.write(11, true, function(err) {
 	console.log(path.join(__dirname, 'public'));
 	return res.render('index', {status: "온수 button 클릭"});
 
-
 //  setTimeout(function() {},500);
 //    gpio.write(11, false, function(err) {
 //          if (err) throw err;
@@ -56,6 +52,7 @@ gpio.write(11, true, function(err) {
 //  	console.log(path.join(__dirname, 'public'));
 //  	return res.render('index',{status: "온수 button 클릭"});
 //      });
+
     });
 
 setTimeout(function() {
@@ -66,8 +63,6 @@ setTimeout(function() {
     return res.render('index',{status: "온수 button 클릭"});
             });
           },500);
-
-
 });
 
 app.listen(3000, function () {
