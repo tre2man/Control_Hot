@@ -7,6 +7,8 @@ gpio.setup(7, gpio.DIR_OUT);
 gpio.setup(11, gpio.DIR_OUT);
 
 
+
+
 app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -14,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 console.log(path.join(__dirname, 'public'));
 
 app.get('/', function(req, res){
- 	res.render('index',{status:"현재 상태를 바꾸실려면 버튼을 누르세요!"});
+ 	res.render('index',{status:"Press Button To change Status of Led !!"});
 });
 
 app.post('/boiler/on', function(req, res){
@@ -38,22 +40,22 @@ gpio.write(7, false, function(err) {
 
 });
 
+
 app.post('/water/button', function(req, res){
 gpio.write(11, true, function(err) {
         if (err) throw err;
-        console.log('Written True True to water');
+        console.log('Written True to water');
 	console.log(path.join(__dirname, 'public'));
-	return res.render('index', {status: "온수 버튼 동작"});
-    }
-  setTimeout(function(){
+	return res.render('index', {status: "온수 button 클릭"});
+
+  setTimeout(function() {
     gpio.write(11, false, function(err) {
             if (err) throw err;
             console.log('Written False to water');
     	console.log(path.join(__dirname, 'public'));
-    	return res.render('index',{status: "온수 버튼 동작"});
-        });
-  },500)
-);
+    	return res.render('index',{status: "온수 button 클릭"});
+        });},500);
+    });
 
 });
 
@@ -64,8 +66,6 @@ gpio.write(11, true, function(err) {
 //	console.log(path.join(__dirname, 'public'));
 //	return res.render('index',{status: "온수 접지 해제"});
 //    });
-//
-//});
 
 app.listen(3000, function () {
   console.log('server start at 3000 port')
