@@ -65,7 +65,7 @@ setTimeout(function() {
     console.log(path.join(__dirname, 'public'));
     return res.render('index',{status: "온수 button 클릭"});
             });
-          },1000);
+          },500);
 
 
 });
