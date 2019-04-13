@@ -4,15 +4,19 @@
 </head>
 
 <body bgcolor="#FFFFF2">
-  <form>
-    <button action="/boiler/on" method="post" type="submit" class="button4">보일러 On </button>
-    <button type="submit" formmethod="post" action="/boiler/off" class="button1">보일러 Off </button>
-  </form>
-    <form>
-    <button action="/water/button" method="post" type="submit" class="button3">온수 button </button>
-  </form>
-    <div id="footer">
-  <a>현재 상태: <%=status %></a>
+  <div class="BorderMargin">
+    <form action="/boiler/on" method="post">
+      <button type="submit" class="button4">보일러 On </button>
+        <button type="submit" formmethod="post" formaction="/boiler/off" class="button1">보일러 Off </button>
+    </form>
+
+    <form action="/water/button" method="post">
+      <button type="submit" class="button3">온수 button </button>
+        <!--<button type="submit" formmethod="post" formaction="/water/off" class="button4">온수 Off </button>-->
+    </form>
+
+    <a>현재 상태: <%=status %></a>
+
   </div>
 
 </body>
