@@ -48,6 +48,15 @@ gpio.write(11, true, function(err) {
 	console.log(path.join(__dirname, 'public'));
 	return res.render('index', {status: "온수 button 클릭"});
 
+  setTimeout(function() {
+    gpio.write(11, false, function(err) {
+            if (err) throw err;
+            console.log('Written False to water');
+    	console.log(path.join(__dirname, 'public'));
+    	return res.render('index',{status: "온수 button 클릭"});
+        });
+  },500);
+
 //  setTimeout(function() {},500);
 //    gpio.write(11, false, function(err) {
 //          if (err) throw err;
@@ -59,16 +68,6 @@ gpio.write(11, true, function(err) {
 });
 
 //setTimeout(function() {},500);
-
-app.post('/water/button', function(req, res){
-  setTimeout(function() {},500);
-gpio.write(11, false, function(err) {
-        if (err) throw err;
-        console.log('Written False to water');
-	console.log(path.join(__dirname, 'public'));
-	return res.render('index',{status: "온수 접지 해제"});
-    });
-});
 
 app.listen(3000, function () {
   console.log('server start at 3000 port')
