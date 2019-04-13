@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 console.log(path.join(__dirname, 'public'));
 
 app.get('/', function(req, res){
- 	res.render('index',{status:"Press Button To change Status of Led !!"});
+ 	res.render('index',{status:"상태를 변경할려면 버튼을 누르세요."});
 });
 
 app.post('/boiler/on', function(req, res){
@@ -48,14 +48,6 @@ gpio.write(11, true, function(err) {
 	console.log(path.join(__dirname, 'public'));
 	return res.render('index', {status: "온수 button 클릭"});
 
-  sleep(500);
-  
-  gpio.write(11, false, function(err) {
-          if (err) throw err;
-          console.log('Written False to water');
-  	console.log(path.join(__dirname, 'public'));
-  	return res.render('index',{status: "온수 button 클릭"});
-        });
 
 //  setTimeout(function() {},500);
 //    gpio.write(11, false, function(err) {
@@ -65,6 +57,15 @@ gpio.write(11, true, function(err) {
 //  	return res.render('index',{status: "온수 button 클릭"});
 //      });
     });
+
+sleep(500);
+
+gpio.write(11, false, function(err) {
+        if (err) throw err;
+        console.log('Written False to water');
+  console.log(path.join(__dirname, 'public'));
+  return res.render('index',{status: "온수 button 클릭"});
+          });
 });
 
 //setTimeout(function() {},500);
