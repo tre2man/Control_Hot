@@ -1,3 +1,5 @@
-# control_hot
+# Control hot water
 
-my boiler control service
+My Home Boiler control system
+- Simple operation way. Only two buttons.
+- Use relay.
