@@ -1,0 +1,77 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<header>
+  <h1>보일러 제어기</h1>
+</header>
+
+<body>
+  <div class="buttons">
+    <div class="onoff">
+      <button type="submit" action="/boiler/on" method="post" class="boilerOn">보일러 ON</button>
+      <button type="submit" action="/boiler/off" method="post" class="boilerOff">보일러 OFF</button>
+    </div>
+    <div class="hotwater">
+      <button type="submit" action="/water/button" method="post" class="waterButton">온수 Button</button>
+      <button type="submit" action="/" method="post" class="unknown">동작 미정</button>
+    </div>
+  </div>
+  <div class="nowStatus">
+    <a class="nowStatusContext">현재 상태 : <%=status%></a>
+  </div>
+</body>
+
+<footer>
+  <p>제작자 : 김남우</p>
+</footer>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  header h1 {
+    text-align: center;
+    margin: 10px;
+  }
+
+  .onoff hotwater {
+    align-items: center;
+  }
+
+  footer{
+    margin: 0;
+  }
+
+  footer p {
+    padding: 10px;
+    text-align: center;
+  }
+
+  button {
+    margin: 2em;
+    height: 50px;
+    width: 130px;
+    border-radius: 10px;
+    border-width: 2px;
+    background-color: white;
+    border-color: green;
+  }
+
+  .waterButton {
+    width:130px
+  }
+
+  .nowStatusContext {
+    margin: 2em;
+  }
+</style>
+
+</html>
